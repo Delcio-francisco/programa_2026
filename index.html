@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML La Dádiva Business World - O Caminho para o Sucesso Global</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --azul-marinho: #0A1931;
+            --rosa-institucional: #F2C4C4;
+            --dourado: #C9A76A;
+            --castanho: #4B2C20;
+            --branco: #FFFFFF;
+            --cinza-claro: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--azul-marinho);
+            line-height: 1.6;
+            background-color: var(--branco);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--rosa-institucional);
+            color: var(--azul-marinho);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dourado);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--dourado);
+            color: var(--azul-marinho);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--rosa-institucional);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--azul-marinho);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img{
+            width: 100px;
+        }
+        
+        .slogan {
+            color: var(--rosa-institucional);
+            font-size: 0.9rem;
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 1px solid var(--dourado);
+            font-style: italic;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 30px;
+        }
+        
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        nav a:hover {
+            color: var(--dourado);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--branco);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 25, 49, 0.85), rgba(10, 25, 49, 0.9)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--branco);
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--branco);
+        }
+        
+        .hero h1 span {
+            color: var(--dourado);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--rosa-institucional);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--branco);
+        }
+        
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--azul-marinho);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--castanho);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Services */
+        .services {
+            background-color: var(--cinza-claro);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .service-card {
+            background-color: var(--branco);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--dourado);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--dourado);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--azul-marinho);
+        }
+        
+        .service-card p {
+            color: var(--castanho);
+        }
+        
+        /* Destinations */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .destination-card {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--branco);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(201, 167, 106, 0.2);
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .destination-icon {
+            font-size: 2rem;
+            color: var(--azul-marinho);
+            margin-bottom: 15px;
+        }
+        
+        .destination-card h4 {
+            font-size: 1.3rem;
+            color: var(--azul-marinho);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(75, 44, 32, 0.9), rgba(75, 44, 32, 0.9)), url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--branco);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--branco);
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--rosa-institucional);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            min-width: 200px;
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--dourado);
+            margin-bottom: 15px;
+        }
+        
+        .contact-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-item a, .contact-item p {
+            color: var(--branco);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--dourado);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--azul-marinho);
+            color: var(--branco);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dourado);
+        }
+        
+        .footer-column p {
+            margin-bottom: 15px;
+            color: var(--rosa-institucional);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--branco);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--dourado);
+            color: var(--azul-marinho);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--rosa-institucional);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--azul-marinho);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav li {
+                margin: 0 0 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 15px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p, .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#destinations">Destinos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>✈️ 2026 COMEÇA AGORA. <span>ESTÁ PRONTO(A) PARA INVESTIR NO SEU FUTURO?</span></h1>
+            <p class="hero-subtitle">Planeje sua formação profissional e seus estudos universitários no exterior em 2026</p>
+            <p>Com a ML La Dádiva Business World, uma agência que trabalha com profissionalismo, segurança e compromisso real.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">FALE CONOSCO AGORA</a>
+                <a href="#services" class="btn btn-secondary">CONHEÇA NOSSOS SERVIÇOS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>NÓS CUIDAMOS DE TODO O PROCESSO PARA VOCÊ</h2>
+                <p>Oferecemos suporte completo do início ao fim do seu processo de internacionalização</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Orientação Acadêmica Personalizada</h3>
+                    <p>Avaliamos seu perfil e objetivos para criar um plano de estudos personalizado que maximize suas chances de sucesso.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Escolha do Curso e Instituição</h3>
+                    <p>Auxiliamos na seleção do curso e instituição ideal alinhados com suas metas profissionais e orçamento.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Acompanhamento Completo</h3>
+                    <p>Organizamos e acompanhamos todo o processo burocrático, desde a aplicação até a chegada ao destino.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança e Confiança</h3>
+                    <p>Garantimos segurança, confiança e tranquilidade em todas as etapas do seu processo de internacionalização.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <div class="container">
+            <div class="section-title">
+                <h2>DESTINOS INTERNACIONAIS</h2>
+                <p>Oferecemos oportunidades de estudo em diversos países da Europa</p>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h4>Portugal</h4>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h4>Espanha</h4>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h4>Alemanha</h4>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h4>Bélgica</h4>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h4>França</h4>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h4>Outros Países</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>NÃO É APENAS ESTUDAR. É CONSTRUIR UM FUTURO SÓLIDO.</h2>
+            <p>Com oportunidades reais e sucesso internacional. Transformamos sonhos em projetos reais.</p>
+            <a href="mailto:mlladadivabusinessworld@gmail.com" class="btn btn-primary">INVISTA NO SEU FUTURO AGORA</a>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Localização</h4>
+                    <p>Angola</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>E-mail</h4>
+                    <a href="mailto:angola@mlladadiva.com">mlladadivabusinessworld@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h4>Telefone/WhatsApp</h4>
+                    <a href="tel:+244932489902">+244 932 489 902</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ML LA DÁDIVA BUSINESS WORLD</h3>
+                    <p>O caminho para o sucesso global. Organizamos caminhos, orientamos decisões e conduzimos ao crescimento sustentável.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <p>Orientação acadêmica e profissional personalizada</p>
+                    <p>Apoio na escolha do curso e da instituição ideal</p>
+                    <p>Organização e acompanhamento completo do processo</p>
+                    <p>Segurança, confiança e tranquilidade do início ao fim</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Comece hoje a planejar seu futuro em 2026</h3>
+                    <p>Entre em contato conosco para uma consulta personalizada e descubra como podemos ajudar você a alcançar o sucesso global.</p>
+                    <a href="mailto:angola@mlladadiva.com" class="btn btn-secondary">FALE CONOSCO</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 ML LA DÁDIVA BUSINESS WORLD. Todos os direitos reservados.</p>
+                <p>Transformando sonhos em projetos reais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+        
+        // Scroll suave para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Efeito de destaque no header ao rolar
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(10, 25, 49, 0.95)';
+            } else {
+                header.style.backgroundColor = 'var(--azul-marinho)';
+            }
+        });
+    </script>
+</body>
+</html>
